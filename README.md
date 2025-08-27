@@ -67,4 +67,4 @@ A simple, elegant breathing timer that guides you through the 4-7-8 breathing te
 
 ## License
 
-ISC 
+[MIT](LICENSE)
