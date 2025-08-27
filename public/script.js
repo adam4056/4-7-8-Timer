@@ -47,7 +47,7 @@ class BreathTimer {
         
         for (let i = 0; i < maxSegments; i++) {
             const segment = document.createElement('div');
-            segment.className = 'w-5 h-16 border-2 border-black transition-all duration-300 ease-in-out';
+            segment.className = 'w-5 h-20 border-2 border-black transition-all duration-300 ease-in-out';
             this.progressBar.appendChild(segment);
         }
         
@@ -67,18 +67,19 @@ class BreathTimer {
         // Segments should be filled from left to right as time progresses
         const filledSegments = totalSegments - this.timeLeft;
         
-        // Hide all segments first
+        // Update all segments - don't hide them, just change their appearance
         for (let i = 0; i < segments.length; i++) {
-            segments[i].style.display = 'none';
-        }
-        
-        // Show and update segments for current phase
-        for (let i = 0; i < totalSegments; i++) {
-            segments[i].style.display = 'block';
-            if (i < filledSegments) {
-                segments[i].className = 'w-5 h-15 bg-black transition-all duration-300 ease-in-out';
+            if (i < totalSegments) {
+                // Show segments for current phase
+                segments[i].style.display = 'block';
+                if (i < filledSegments) {
+                    segments[i].className = 'w-5 h-20 bg-black transition-all duration-300 ease-in-out';
+                } else {
+                    segments[i].className = 'w-5 h-20 border-2 border-black transition-all duration-300 ease-in-out';
+                }
             } else {
-                segments[i].className = 'w-5 h-15 border-2 border-black transition-all duration-300 ease-in-out';
+                // Hide segments that are not part of current phase
+                segments[i].style.display = 'none';
             }
         }
     }
@@ -132,6 +133,9 @@ class BreathTimer {
         
         this.breathText.textContent = 'Click Start';
         this.updateDisplay();
+        
+        // Reset progress bar to initial state
+        this.createProgressBar();
     }
     
     nextPhase() {

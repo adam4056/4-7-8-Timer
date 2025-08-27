@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities; 
+@tailwind utilities;
+
+@layer utilities {
+  .h-20 {
+    height: 5rem; /* 80px */
+  }
+} 

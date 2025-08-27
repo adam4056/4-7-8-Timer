@@ -16,14 +16,14 @@ A simple, elegant breathing timer that guides you through the 4-7-8 breathing te
 4-7-8-timer/
 ├── public/           # Public assets
 │   ├── index.html    # Main HTML file
-│   └── script.js     # JavaScript functionality
+│   ├── script.js     # JavaScript functionality
+│   └── output.css    # Compiled CSS output
 ├── src/              # Source files
 │   └── input.css     # Tailwind CSS source
-├── dist/             # Build output
-│   └── output.css    # Compiled CSS
 ├── package.json      # NPM configuration
 ├── tailwind.config.js # Tailwind configuration
-└── postcss.config.js # PostCSS configuration
+├── postcss.config.js # PostCSS configuration
+└── LICENSE           # MIT License
 ```
 
 ## Setup
@@ -53,9 +53,12 @@ A simple, elegant breathing timer that guides you through the 4-7-8 breathing te
 
 ## Development
 
-- **Build CSS**: `npm run build`
-- **Watch mode**: `npm run dev` or `npm run watch`
-- **Source files**: Edit `src/input.css` for styles, `public/script.js` for functionality
+- **Build CSS**: `npm run build` - Compiles Tailwind CSS
+- **Watch mode**: `npm run dev` or `npm run watch` - Automatically rebuilds on changes
+- **Source files**: 
+  - Edit `src/input.css` for Tailwind CSS customizations
+  - Edit `public/script.js` for JavaScript functionality
+  - Edit `public/index.html` for HTML structure
 
 ## Technologies
 
@@ -64,6 +67,10 @@ A simple, elegant breathing timer that guides you through the 4-7-8 breathing te
 - **Vanilla JavaScript**: No frameworks, pure ES6+
 - **PostCSS**: CSS processing
 - **Autoprefixer**: Vendor prefixing
+
+## Author
+
+Adam Skřivánek
 
 ## License
 
