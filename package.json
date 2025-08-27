@@ -1,0 +1,25 @@
+{
+  "name": "4-7-8-timer",
+  "version": "1.0.0",
+  "description": "4-7-8 Breathing Timer with Tailwind CSS",
+  "main": "public/index.html",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css",
+    "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "keywords": [
+    "breathing",
+    "timer",
+    "meditation",
+    "tailwind"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17"
+  }
+}

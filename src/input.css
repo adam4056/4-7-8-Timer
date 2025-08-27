@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .segment {
+    transition: all 0.3s ease;
+  }
+  
+  .segment.filled {
+    background-color: #000;
+  }
+  
+  .segment.empty {
+    background-color: transparent;
+    border: 2px solid #000;
+  }
+  
+  .progress-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    min-height: 80px;
+  }
+} 
