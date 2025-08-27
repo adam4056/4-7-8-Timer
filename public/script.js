@@ -47,9 +47,7 @@ class BreathTimer {
         
         for (let i = 0; i < maxSegments; i++) {
             const segment = document.createElement('div');
-            segment.className = 'segment empty';
-            segment.style.width = '20px';
-            segment.style.height = '60px';
+            segment.className = 'w-5 h-16 border-2 border-black transition-all duration-300 ease-in-out';
             this.progressBar.appendChild(segment);
         }
         
@@ -78,9 +76,9 @@ class BreathTimer {
         for (let i = 0; i < totalSegments; i++) {
             segments[i].style.display = 'block';
             if (i < filledSegments) {
-                segments[i].className = 'segment filled';
+                segments[i].className = 'w-5 h-15 bg-black transition-all duration-300 ease-in-out';
             } else {
-                segments[i].className = 'segment empty';
+                segments[i].className = 'w-5 h-15 border-2 border-black transition-all duration-300 ease-in-out';
             }
         }
     }
